@@ -6,33 +6,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Security Log Miner</title>
 </head>
 <body>
-    <!-- hero section that is divided into two columns: 60% width for left column and 40% width for right column -->
-    <div class="container-fluid">
+    <div class="container-xxl">
         <div class="row">
             <div class="col-md-8">
                 <h1>Security Log Miner</h1>
-                <p>System Management Software provides the insight needed to secure, troubleshoot, and optimize systems and applications. Whether it is an individual user or larger organization, log collection is the first step in the analysis process. The collection and storage of system and application logs is designed with ease-of-use in mind to provide simple and efficient event visibiilty for any device.</p>
+                <p class="fs-3">System Management Software provides the insight needed to secure, troubleshoot, and optimize systems and applications. Whether it is an individual user or larger organization, log collection is the first step in the analysis process. The collection and storage of system and application logs is designed with ease-of-use in mind to provide simple and efficient event visibiilty for any device.</p>
             </div>
             <div class="col-md-4">
-                <!-- rotate through the images located in assets folder -->
                 <img name="slide" width="100%" height="100%">
             </div>
         </div>
     </div>
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- function that rotates through the images located in assets folder -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
     <script>
         let i = 0;
         let images = [];
         let time = 7000;
 
-        // Image List
         images[0] = 'assets/1.png';
         images[1] = 'assets/2.png';
         images[2] = 'assets/3.png';
@@ -41,7 +37,6 @@
         images[5] = 'assets/4.png';
         images[7] = 'assets/5.png';
                
-        // Change Image
         function changeImg() {
             console.log(document.slide.src);
             document.slide.src = images[i];
