@@ -17,7 +17,8 @@
                 <p class="fs-3">System Management Software provides the insight needed to secure, troubleshoot, and optimize systems and applications. Whether it is an individual user or larger organization, log collection is the first step in the analysis process. The collection and storage of system and application logs is designed with ease-of-use in mind to provide simple and efficient event visibiilty for any device.</p>
             </div>
             <div class="col-md-4">
-                <img name="slide" width="100%" height="100%">
+                <!--<img name="slide" width="100%" height="100%"> -->
+                <span id="use_case"></span>
             </div>
         </div>
     </div>
@@ -27,7 +28,13 @@
     <script>
         let i = 0;
         let images = [];
-        let time = 7000;
+        let uses = []
+        let time = 3000;
+
+        uses[0] = 'Use Case: Monitor and analyze logs for security threats';
+        uses[1] = 'Use Case: Troubleshoot system and application issues';
+        uses[2] = 'Use Case: Optimize system and application performance';
+        uses[3] = 'Use Case: Provide event visibility for any device';
 
         images[0] = 'assets/1.png';
         images[1] = 'assets/2.png';
@@ -37,19 +44,21 @@
         images[5] = 'assets/6.png';
         images[6] = 'assets/7.png';
                
-        function changeImg() {
-            console.log(document.slide.src);
-            document.slide.src = images[i];
+        function changeHero() {
+            //console.log(document.slide.src);
+            console.log(document.getElementById('use_case').innerHTML = 'Use Case: ');
+            //document.slide.src = images[i];
+            document.getElementById('use_case').innerHTML = uses[i];
             if (i < images.length - 1) {
                 i++;
             } else {
                 i = 0;
             }
 
-            setTimeout('changeImg()', time);
+            setTimeout('changeHero()', time);
         }
 
-        window.onload = changeImg;
+        window.onload = changeHero;
     </script>
 </body>
 </html>
